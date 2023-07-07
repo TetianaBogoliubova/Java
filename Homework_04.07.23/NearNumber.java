@@ -19,15 +19,14 @@ public class NearNumber {
 
         double res1 = number1 - 10;
         double res2 = number2 - 10;
-    if(Math.abs(res1) < Math.abs(res2)) {
+        if (Math.abs(res1) < Math.abs(res2)) {
             System.out.println("Ближайшее к 10 число = " + number1);
-    }
-        if(Math.abs(res1) == Math.abs(res2)) {
+        } else if (Math.abs(res1) == Math.abs(res2)) {
             System.out.println("Данные числа равноудалены от 10");
+
+        } else {
+            System.out.println("Ближайшее к 10 число = " + number2);
         }
-    else {
-        System.out.println("Ближайшее к 10 число = " + number2);
-    }
     }
 }
 

@@ -11,18 +11,22 @@ public class LeapYear {
         System.out.println("Введите год, начиная с 1584 ");
         isLeapYear = myScanner.nextInt();
 
-
         int startCountYear1 = isLeapYear % 100;
         int startCountYear2 = isLeapYear % 400;
 
-        if (startCountYear1 != 0) {
-            int rez1 = startCountYear1 % 4;
-            System.out.println("Четное");
-
-            if (startCountYear1 == 0 && startCountYear2 == 0)
-                System.out.println("Высокосный");
-        } else {
+        if (isLeapYear % 4 != 0)
             System.out.println("Невысокосный");
-        }
+
+        else if ((startCountYear1 != 0) && (startCountYear1 % 4 == 0))
+            System.out.println("Высокосный");
+
+        else if ((startCountYear1 != 0) && (startCountYear1 % 4 != 0))
+            System.out.println("Невысокосный");
+
+        else if (startCountYear1 == 0 && startCountYear2 == 0)
+            System.out.println("Высокосный");
+
+        else System.out.println("Невысокосный");
     }
 }
+

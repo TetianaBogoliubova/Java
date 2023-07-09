@@ -52,10 +52,10 @@ public class WorkTimeShop {
         if ((a || b) || (a && b)) {
             a = isReweOpen = true;
             b = isEdekaOpen = true;
-            System.out.println("Я могу купить еду, это " + true);
+            System.out.println("Я могу купить еду, это - " + true);
         }
         if (!(a && b)) {
-            System.out.println("Оба магазина закрыты - " + false);
+            System.out.println("Я могу купить еду? Нет, это - " + false);
         }
     }
 }
